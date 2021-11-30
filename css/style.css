@@ -82,9 +82,14 @@
     }
 }
 
-/* .socials-container {
-    background-color: #5c6c92;
-    height: 5rem;
+footer {
+    background-color: #799121;
+    height: 10rem;
+}
+
+ /*.socials-container {
+    background-color: #799121;
+    height: 10rem;
 } */
 
 .socials {
@@ -93,5 +98,5 @@
 }
 
 .socials:hover{
-    color: #799121;
+    color: #214191;
 }
