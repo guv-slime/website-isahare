@@ -1,47 +1,144 @@
-/* 
-#912141 - red
-#799121 - green
-#214191 - blue
-*/
-/* h1 {
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-size: 32px;
-    font-weight: 800;
-} */
+/* ---------Color Variables--------- */
+:root {
+    --clr-red: #912141;
+    --clr-green: #799121;
+    --clr-blue: #214191;
+    --clr-grey: #ddd;
+    --clr-dark: #aaa;
+}
 
-/* Presets */
-* {
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.17rem;
+}
+
+/* ---------Presets ---------*/
+*, *:before, *:after {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
-/* Header & Navigation Bar */
-.container {
-    width: 100%;
-    height: 5rem;
-    background-color: #912141;
-    display: grid;
-    grid-template-columns: auto auto auto;
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--clr-grey);
+    /* background-image: radial-gradient(circle, var(--clr-red), var(--clr-green), var(--clr-blue)); */
 }
 
-#bun {
-    height: 5rem;
+/* --------Header & Navigation Bar -----------*/
+nav {
+    padding: 0.25rem 0 0.25rem 0.25rem;
 }
-
-.menu-container {
-    background: #799121;
-    height: 5rem;
-}
-
-.menu-container ul {
+.nav-list {
+    background-color:white;
+    /* background-image: linear-gradient(to bottom right, white, #79912190); */
+    /* background-image: radial-gradient(circle, var(--clr-red), var(--clr-green), var(--clr-blue)); */
+    box-shadow: 0px 0px 10px var(--clr-dark);
+    border-radius: 0.2rem;
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 5rem;
+    align-items: center;
+    width: 100%;
 }
 
-/* Gallery */
+.nav-item  {
+    margin-right: 2rem;
+}
+
+#emory-name {
+    font-size: 3.17rem;
+    font-weight: 200;
+    color: var(--clr-red);
+    transition: color 0.75s;
+}
+
+#hare-name {
+    font-size: 3.17rem;
+    font-weight: 700;
+    color: var(--clr-red);
+    transition: color 0.75s;
+}
+
+.nav-item:first-child{
+    margin-right: auto;
+    margin-left: 2rem;
+    transition: color 0.75s;
+}
+
+.nav-item:nth-child(2) a{
+    color: var(--clr-green);
+    transition: color 0.75s;
+}
+
+.nav-item:nth-child(3) a{
+    color: var(--clr-blue);
+    transition: color 0.75s;
+}
+
+.nav-item:nth-child(4) a {
+    color: var(--clr-red);
+    transition: color 0.75s;
+}
+
+/* Hovers */
+#emory-name:hover {
+    font-weight: 400;
+    color: var(--clr-green);
+    text-decoration: underline;
+}
+
+#hare-name:hover {
+    font-weight: 900;
+    color: var(--clr-blue);
+    text-decoration: underline;
+}
+
+.nav-item:nth-child(2) a:hover{
+    color: var(--clr-blue);
+    text-decoration: underline;
+}
+
+.nav-item:nth-child(3) a:hover{
+    color: var(--clr-red);
+    text-decoration: underline;
+}
+
+.nav-item:nth-child(4) a:hover{
+    color: var(--clr-green);
+    text-decoration: underline;
+}
+
+/* Header Images */
+#bun {
+    height: 6rem;
+}
+
+/* Anything under 1300 px */
+@media screen and (max-width: 1300px) {
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .nav-item:first-child{
+        margin: 0;
+    }
+
+    .nav-item {
+        padding: 1rem;
+        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    }
+    
+    #bun {
+        display: none;
+    }
+}
+
+/* ----------- Gallery ------------*/
 .image-grid {
     --gap: 1rem; /* gap between each photo */
     --num-cols: 3; /* number of columns in grid */
@@ -82,21 +179,34 @@
     }
 }
 
+/* ------------  FOOTER / DO NOT KEEP AS IS---------------*/
 footer {
-    background-color: #799121;
-    height: 10rem;
+    /* background-color: var(--clr-green);
+    height: 10rem; */
 }
 
- /*.socials-container {
-    background-color: #799121;
-    height: 10rem;
-} */
+ .socials-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--clr-blue);
+    border-radius: 0.2rem;
+}
+
+#notification-text {
+    margin-right: auto;
+    margin-left: 2rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 
 .socials {
-    color: #912141;
+    color: var(--clr-red);
     transition: color 0.2s;
+    padding: 0 0.25rem;
 }
 
 .socials:hover{
-    color: #214191;
+    color: var(--clr-blue);
 }

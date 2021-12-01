@@ -6,46 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Raleway:ital,wght@0,100;0,500;0,800;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Emory Hare</title>
 </head>
 <body>
-    <!-- Header (Bun Logo + My Name), Navigation (Links / Hamburger Menu)--> 
-    <header>
-        <div class = "container">
-            <img id = "bun"src="/img/bun_logo_vector.svg" alt="emoryisahare logo">
-            <!-- ^^ change bun color ^^ -->
-            <h1>emoryisahare</h1>
-            <nav>
-                <div class = "menu-container">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Wares</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-    
-    <!-- Shop (Display Stickers on a Slider) -->
-    <!-- Grid Based Gallery (Cards)-->
-    <div class = "image-grid">
-        <img class = "image-grid-col-2 image-grid-row-2" src="img/blue-razzbirdy.JPG" alt="Blue-Razzbirdy by Emory Hare">
-        <img src="img/pescado.JPG" alt="Pescado by Emory Hare">
-        <img src="img/Always_Squatching.jpg" alt="Always_Squatching by Emory Hare">
-        <img src="img/the_great_exchange.JPG" alt="The Great Exchange by Emory Hare">
-        <img class = "image-grid-col-2 image-grid-row-2"src="img/pescado.JPG" alt="Pescado by Emory Hare">
-        <img src="img/tadpole-soul.JPG" alt="Tadpole Soul by Emory Hare">
-        
-    </div>
-    <!-- Footer (Social Links + Regular Links + Signature) --> 
-
-    <footer>
-        <div class = "socials-container">
+    <!-- Floating Social Links DO NOT KEEP THIS -->
+    <!-- <div class = "socials-container">
+        <h2 id = "notification-text">Site Launching SOON!</h2>
         <a class ="socials" href="https://twitter.com/emoryisahare" target = "_blank">
             <ion-icon size = "large" name="logo-twitter"></ion-icon>
         </a>
@@ -58,18 +26,47 @@
         <a class ="socials" href="https://www.twitch.tv/emoryisahare/" target = "_blank">
             <ion-icon size = "large" name="logo-twitch"></ion-icon>
         </a>
-        <a class ="socials" href="https://www.deviantart.com/emoryisahare/" target = "_blank">
-            <ion-icon size = "large" name="logo-deviantart"></ion-icon>
-        </a>
-        <a class ="socials" href="https://www.behance.net/emoryisahare/" target = "_blank">
-            <ion-icon size = "large" name="logo-behance"></ion-icon>
-        </a>
         <a class ="socials" href="https://www.patreon.com/emoryisahare/" target = "_blank">
             <ion-icon size = "large" name="logo-pinterest"></ion-icon>
         </a>
+    </div> -->
+    <!-- Notification Bar -->
+    <!-- Header (Bun Logo + My Name), Navigation (Links / Flex Box)-->     
+    <header>
+        <nav>
+            <ul class = "nav-list">
+                <li class = "nav-item">
+                    <a href="#">
+                        <h1><span id = "emory-name">Emory</span><span id = "hare-name">Hare</span></h1>
+                    </a>
+                </li>
+                <li class = "nav-item">
+                    <a href="#"><h2>Portfolio</h2></a>
+                </li>
+                <li class = "nav-item">
+                    <a href="#"><h2>About</h2></a>
+                </li>
+                <li class = "nav-item">
+                    <a href="#"><h2>Contact</h2></a>
+                </li>
+                <img id = "bun" src="img/banner.png" alt="Bun Logo">                
+            </ul>
+        </nav>
+    </header>
+    <!-- Quick About  -->
+    <!-- digital artist,  -->
+    <!-- Shop (Display Stickers on a Slider) -->
+    <!-- Grid Based Gallery (Cards)-->
+    <div class = "image-grid">
+        <img class = "image-grid-col-2 image-grid-row-2" src="img/blue-razzbirdy.JPG" alt="Blue-Razzbirdy by Emory Hare">
+        <img src="img/pescado.JPG" alt="Pescado by Emory Hare">
+        <img src="img/Always_Squatching.jpg" alt="Always_Squatching by Emory Hare">
+        <img src="img/the_great_exchange.JPG" alt="The Great Exchange by Emory Hare">
+        <img class = "image-grid-col-2 image-grid-row-2"src="img/untitled.jpg" alt="Pescado by Emory Hare">
+        <img src="img/tadpole-soul.JPG" alt="Tadpole Soul by Emory Hare">
     </div>
-    </footer>
-    
+    <!-- Footer (Social Links + Regular Links + Signature) --> 
+    <footer></footer>
     <!-- Allows for use of Ionic Icons without using IONIC framework -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
