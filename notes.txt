@@ -1,12 +1,8 @@
 12.1.21
 
 Home Page
-1. Add gradient white to gray on the nav Bar
-2. Drop down menus
+1. sticky navbar (when widescreen)
 3. pop up cards for images in Gallery
-4. floating icons
-5. gradients?
-6. footer
 
 
 LATER:

@@ -7,7 +7,6 @@
     --clr-dark: #aaa;
 }
 
-
 h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 3.17rem;
@@ -31,6 +30,7 @@ body {
 /* --------Header & Navigation Bar -----------*/
 nav {
     padding: 0.25rem 0 0.25rem 0.25rem;
+    
 }
 .nav-list {
     background-color:white;
@@ -138,6 +138,76 @@ nav {
     }
 }
 
+/* ----------- Hero Image / Text ---------- */
+/* The animation code */
+@keyframes hero-bun {
+  0% {background-color: var(--clr-grey);}
+  25% {background-color: var(--clr-red);}
+  50% {background-color: var(--clr-green);}
+  75% {background-color: var(--clr-blue);}
+  100%{background-color: var(black);}
+}
+
+.hero-banner {
+    background-image: url("../img/bun-logo-color-2.svg");
+    background-position: right;
+    background-size: 1800px;
+    height: 100vh;
+    background-color: black;
+    background-repeat: no-repeat;
+
+    /*hero animation*/
+    animation-name: hero-bun;
+    animation-duration: 20s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+.hero-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-item h1 {
+    font-size: 8em;
+}
+
+.hero-item h2 {
+    font-size: 3em;
+}
+/*.hero-banner h1{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}*/
+
+
+/* Anything under 1300 px */
+@media screen and (max-width: 1300px) {
+    .hero-banner .hero-item {
+        position: relative;
+    }
+    .hero-item h1{
+        font-size: 4em;
+    }
+    .hero-item h2{
+        font-size: 1.5em;
+    }
+    .hero-banner {
+        background-size: 900px;
+    }
+}
+
 /* ----------- Gallery ------------*/
 .image-grid {
     --gap: 1rem; /* gap between each photo */
@@ -179,34 +249,57 @@ nav {
     }
 }
 
-/* ------------  FOOTER / DO NOT KEEP AS IS---------------*/
-footer {
-    /* background-color: var(--clr-green);
-    height: 10rem; */
+/* ------------  FOOTER---------------*/
+.foot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    background-color: var(--clr-red);
+    padding: 1rem 1rem;
+    border-radius: 1rem 0 0 0;   
+}
+
+.foot-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    padding: 0 1rem;
+}
+
+.foot-nav h2{
+    padding: 1rem;
+    color: white;
+    transition: color 0.75s;
+}
+
+.foot-nav a:hover h2:hover {
+    color: var(--clr-green);
+    text-decoration: underline;
 }
 
  .socials-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: var(--clr-blue);
-    border-radius: 0.2rem;
-}
-
-#notification-text {
-    margin-right: auto;
-    margin-left: 2rem;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .socials {
-    color: var(--clr-red);
-    transition: color 0.2s;
+    color: var(--clr-grey);
+    transition: color 0.75s;
     padding: 0 0.25rem;
 }
 
 .socials:hover{
     color: var(--clr-blue);
+}
+
+.created-by {
+    color: white;
+    padding: 1rem;
 }
