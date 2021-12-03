@@ -3,7 +3,7 @@
     --clr-red: #912141;
     --clr-green: #799121;
     --clr-blue: #214191;
-    --clr-grey: #ddd;
+    --clr-grey: #ddd; 
     --clr-dark: #aaa;
 }
 
@@ -19,6 +19,10 @@ h1 {
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -152,7 +156,7 @@ nav {
     background-image: url("../img/bun-logo-color-2.svg");
     background-position: right;
     background-size: 1800px;
-    height: 100vh;
+    height: 80vh;
     background-color: black;
     background-repeat: no-repeat;
 
@@ -175,6 +179,29 @@ nav {
     color: white;
 }
 
+/* Anime-Arrow Animation */
+@keyframes hero-arrow-slide {
+    from {padding-top: 0;}
+    to {padding-top: 2rem;}
+}
+
+@keyframes hero-arrow-grow {
+    from {transform: scale(1);}
+    to {transform: scale(2);}
+}
+/* weird x - scrollbar moves with animation */
+
+.anime-arrow {
+    animation-name: hero-arrow-slide, hero-arrow-grow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.hero-item a {
+    color: white;
+}
+
 .hero-item h1 {
     font-size: 8em;
 }
@@ -182,15 +209,6 @@ nav {
 .hero-item h2 {
     font-size: 3em;
 }
-/*.hero-banner h1{
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}*/
-
 
 /* Anything under 1300 px */
 @media screen and (max-width: 1300px) {
