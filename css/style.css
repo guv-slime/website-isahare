@@ -28,7 +28,9 @@ html {
 body {
     font-family: 'Raleway', sans-serif;
     background-color: var(--clr-grey);
-    /* background-image: radial-gradient(circle, var(--clr-red), var(--clr-green), var(--clr-blue)); */
+
+    /* transform-animation scrolling fix */
+    overflow-x: hidden;
 }
 
 /* --------Header & Navigation Bar -----------*/
@@ -38,8 +40,6 @@ nav {
 }
 .nav-list {
     background-color:white;
-    /* background-image: linear-gradient(to bottom right, white, #79912190); */
-    /* background-image: radial-gradient(circle, var(--clr-red), var(--clr-green), var(--clr-blue)); */
     box-shadow: 0px 0px 10px var(--clr-dark);
     border-radius: 0.2rem;
     display: flex;
@@ -156,7 +156,7 @@ nav {
     background-image: url("../img/bun-logo-color-2.svg");
     background-position: right;
     background-size: 1800px;
-    height: 80vh;
+    height: 90vh;
     background-color: black;
     background-repeat: no-repeat;
 
@@ -215,6 +215,9 @@ nav {
     .hero-banner .hero-item {
         position: relative;
     }
+    .hero-banner {
+        height: 60vh;
+    }
     .hero-item h1{
         font-size: 4em;
     }
@@ -226,11 +229,11 @@ nav {
     }
 }
 
-/* ----------- Gallery ------------*/
+/* ----------- Home Gallery ------------*/
 .image-grid {
     --gap: 1rem; /* gap between each photo */
     --num-cols: 3; /* number of columns in grid */
-    --row-height: 300px; /* height of image*/
+    --row-height: 500px; /* height of image*/
 
     box-sizing: border-box;
     padding: var(--gap);
@@ -265,6 +268,16 @@ nav {
         --num-cols: 2;
         --row-height: 200px;
     }
+}
+
+/* ------------ Call to Action ----------- */
+.call-to-act {
+    background-color: var(--clr-blue);
+}
+
+/* ------------ Contact-Form ------------- */
+.contact-form {
+    background-color: var(--clr-green);
 }
 
 /* ------------  FOOTER---------------*/
