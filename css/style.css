@@ -7,11 +7,6 @@
     --clr-dark: #aaa;
 }
 
-h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 3.17rem;
-}
-
 /* ---------Presets ---------*/
 *, *:before, *:after {
     margin: 0;
@@ -30,8 +25,19 @@ body {
     background-color: var(--clr-grey);
     background-image: url(/img/backpurple.png);
 
-    /* transform-animation scrolling fix */
-    overflow-x: hidden;
+    overflow-x: hidden; /* transform-animation scrolling fix */
+}
+
+.gallery-body {
+    background-image: none;
+    background-color: var(--clr-grey);
+
+    /* margin: 0 3.5rem; */
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.17rem;
 }
 
 /* --------Header & Navigation Bar -----------*/
@@ -39,6 +45,7 @@ nav {
     padding: 0.25rem 0 0.25rem 0.25rem;
     
 }
+
 .nav-list {
     background-color:white;
     box-shadow: 0px 0px 10px var(--clr-dark);
@@ -164,7 +171,7 @@ nav {
     /*hero animation*/
     animation-name: hero-bun;
     animation-duration: 20s;
-    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
@@ -181,23 +188,26 @@ nav {
 }
 
 /* Anime-Arrow Animation */
-@keyframes hero-arrow-slide {
+/* @keyframes hero-arrow-slide {
     from {padding-top: 0;}
     to {padding-top: 2rem;}
-}
+} */
 
 @keyframes hero-arrow-grow {
     from {transform: scale(1);}
-    to {transform: scale(2);}
+    to {transform: scale(1.5);}
 }
 /* weird x - scrollbar moves with animation 
-   fixed by adding x overflow to body*/
+   fixed by adding x overflow to body
+   
+   has something to do with padding*/
 
 .anime-arrow {
     animation-name: hero-arrow-slide, hero-arrow-grow;
-    animation-duration: 4s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    padding-top: 1rem;
 }
 
 .hero-item a {
@@ -231,54 +241,12 @@ nav {
     }
 }
 
-/* ----------- Home Gallery (Not in Use) ------------*/
-/* .image-grid {
-    --gap: 1rem; /* gap between each photo */
-    /* --num-cols: 3; number of columns in grid  */
-    /*--row-height: 500px; height of image */
-/* 
-    box-sizing: border-box;
-    padding: var(--gap);
-
-    display: grid;
-    grid-template-columns: repeat(var(--num-cols), 1fr);
-    grid-auto-rows: var(--row-height);
-    gap: var(--gap);
-} */
-
-/* .image-grid > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    object-fit: contain; */
-    /* object-fit: fill;  causes image to strech*/
-    /* object-fit: scale-down;
-} */
-
-/* .image-grid-col-2 {
-    grid-column: span 2;
-}
-
-.image-grid-row-2 {
-    grid-row: span 2;
-} */
-
-/* Anything under 1024 px */
-/* @media screen and (max-width: 1024px) {
-    .image-grid {
-        --num-cols: 2;
-        --row-height: 200px;
-    }
-} */
-
-
-/* ---------- Home Gallery - Flex ---------- */
+/* ---------- Gallery - Flex ---------- */
 .gallery-row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 .gallery-column {
@@ -287,64 +255,90 @@ nav {
     padding: 0 4px;
 }
 
-.gallery-column img:hover {
-    box-shadow:  0 1em 1em var(--clr-green);
-    transition: all 0.25s;
-}
-
 .gallery-column img {
     margin-top: 8px;
     vertical-align: middle;
-    border-radius: 1rem 1rem 0 0;
-
     width: 100%;
 }
 
-.gallery-column h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
+/* .art-container {
+
+} */
+
+.gallery-title {
+    font-weight: 200;
+    color: black;
+    font-style: italic;
+    float: right;
 }
 
-.gallery-column a {
+/* ------image hover ------ */
+.hover-container {
+    position: relative;
+}
+
+.overlay { 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+#overlay-gallery {
+    background-color: var(--clr-red);
+}
+
+#overlay-about {
+    background-color: var(--clr-green);
+}
+
+#overlay-contact {
+    background-color: var(--clr-blue);
+}
+
+.hover-container:hover .overlay {
+    opacity: 0.9;
+}
+
+.hover-text {
     color: white;
-    font-weight: 300;
-    transition: all 0.25s;
-}
-.gallery-column a:hover {
-    font-weight: 700;
-}
-
-#gallery-title {
-    /* background-image: linear-gradient(to top, var(--clr-blue), var(--clr-green)); */
-    background-color: var(--clr-red);
-    border-radius: 0 0 1rem 1rem;
-    box-shadow:  0 0.25em var(--clr-blue);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
-#about-title {
-    background-color: var(--clr-red);
-    /* background-image: linear-gradient(to top, var(--clr-green), var(--clr-red)); */
-    border-radius: 0 0 1rem 1rem;
-    box-shadow:  0 0.25em var(--clr-blue);
+@keyframes gallery-link-animation {
+    from {opacity: 0.2;}
+    to {opacity: 0.7;}
 }
-
-#contact-title {
-    background-color: var(--clr-red);
-    /* background-image: linear-gradient(to top, var(--clr-red), var(--clr-blue)); */
-    border-radius: 0 0 1rem 1rem;
-    box-shadow:  0 0.25em var(--clr-blue);
-}
-
-
 
 @media screen and (max-width: 700px) {
     .gallery-column {
         flex: 100%;
         max-width: 100%;
     }
+    .gallery-column iframe {
+        height: 240px;
+        width: 320px;
+    }
+    .overlay {
+        /*hover-animation-mobile*/
+        animation-name: gallery-link-animation;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
 }
+
+
 
 /* ------------ Call to Action / Contact-form ----------- */
 .action-container {
@@ -359,12 +353,12 @@ nav {
     background-color: var(--clr-blue);
     width: 100%;
     align-items: center;
-    padding: 2rem;
+    padding: 5em;
     border-radius: 1rem;
     margin-right: 0.5rem;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 
     background-image: url(/img/banner.png);
@@ -374,7 +368,7 @@ nav {
     background-color: var(--clr-green);
     width: 100%;
     align-items: center;
-    padding: 2rem;
+    padding: 5rem;
     border-radius: 1rem;  
 
     display: flex;
@@ -384,8 +378,27 @@ nav {
     background-image: url(/img/banner.png);
 }
 
-@media screen and (max-width: 700px) {
-    .action-container, .contact-form, .call-to-act {
+.button-cool {
+    background-color: var(--clr-red);
+    border: none;
+    border-radius: 0.75em;
+    padding: 1.5em;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-weight: 700;
+    margin-top: 2em;
+    
+    transition-duration: 0.5s;
+}
+
+.button-cool:hover {
+    background-color: var(--clr-blue);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1600px) {
+    .action-container {
         flex-direction: column;
     }
     .call-to-act {
