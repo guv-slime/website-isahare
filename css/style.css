@@ -23,7 +23,7 @@ html {
 body {
     font-family: 'Raleway', sans-serif;
     background-color: var(--clr-grey);
-    background-image: url(/img/backpurple.png);
+    background-image: url("../img/backpurple.png");
 
     overflow-x: hidden; /* transform-animation scrolling fix */
 }
@@ -361,7 +361,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
 
-    background-image: url(/img/banner.png);
+    background-image: url("../img/banner.png");
 }
 
 .contact-form {
@@ -375,7 +375,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
 
-    background-image: url(/img/banner.png);
+    background-image: url(../img/banner.png);
 }
 
 .button-cool {
