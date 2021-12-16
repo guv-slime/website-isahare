@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>About</title>
+    <title>Emory Hare - About</title>
 </head>
 <body>
     
     <!-- Notification Bar -->
     <!-- Header (Bun Logo + My Name), Navigation (Links / Flex Box)-->     
     <header>
-        <nav>
+        <nav id="nav-main">
             <ul class = "nav-list">
                 <li class = "nav-item">
                     <a href="index.html">
@@ -35,9 +35,44 @@
             </ul>
         </nav>
     </header>
+    <nav id="nav-burger">
+        <div id="menuToggle">
+
+            <input type="checkbox" />
+        
+            <span id="red-span"></span>
+            <span id="green-span"></span>
+            <span id="blue-span"></span>
+        
+            <ul id="menu">
+            <a href="index.html" class= "red-green-link"><li>Home</li></a>
+            <a href="gallery.html" class="green-blue-link"><li>Gallery</li></a>
+            <a href="about.html" class="blue-red-link"><li>About</li></a>
+            <a href="contact.html" class="red-green-link"><li>Contact</li></a>
+            </ul>
+        </div>
+   </nav>
     <!-- About Section -->
-    <!-- Personal -->
-    <!-- Professional -->
+    <div class = "about-container">
+        <div>
+            <h1>About Me</h1>
+        </div>
+        <div>
+            <p>
+                My name is Emory Hare, and I am a digital artist out of Eastern North Carolina. I have been interested in being an artist for a long time, and I've just recently decided to fully dedicate my time to pursing art as my official career. Previously focused on pen and paper, I've now taken up digital art as my primary medium, and I'm really enjoying it so far. I like the freedom to edit and rearrange an infinite number of times to get a piece exactly how I want it. My style has been described as "cartoony realism," and I'm heavily influenced by my love of The Ren & Stimpy Show and similar cartoons I watched growing up. 
+            </p>
+        </div>
+        <div>
+            <p>
+                I have always loved making art, and I'm really grateful that I can commit myself fully to my passion, hopefully bringing joy to others in the process. My art often has funny and punny elements, usually with some unknown creature as a subject. I have been doing studies of real-life creatures to bring some greater accuracy to my work, so some pieces are more realistic than others. But I know that while my general style will always be the same, I will continue growing as an artist and producing different types of art over time. 
+            </p>
+        </div>
+        <div>
+            <p>
+                Thank you for being part of my journey, and if my art can make you crack a smile or a laugh when you look at it, then I'd call that a success. 
+            </p>
+        </div>
+    </div>
 
       <!-- Footer (Social Links + Regular Links + Signature) --> 
     <footer>

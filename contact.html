@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Contact</title>
+    <title>Emory Hare - Contact</title>
 </head>
-<body>
+<body class = "contact-body">
     <!-- Notification Bar -->
     <!-- Header (Bun Logo + My Name), Navigation (Links / Flex Box)-->     
     <header>
-        <nav>
+        <nav id="nav-main">
             <ul class = "nav-list">
                 <li class = "nav-item">
                     <a href="index.html">
@@ -34,10 +34,72 @@
             </ul>
         </nav>
     </header>
-    <!-- Shop (Display Stickers on a Slider) -->
+    <nav id="nav-burger">
+        <div id="menuToggle">
 
-
-       <!-- Footer (Social Links + Regular Links + Signature) --> 
+            <input type="checkbox" />
+        
+            <span id="red-span"></span>
+            <span id="green-span"></span>
+            <span id="blue-span"></span>
+        
+            <ul id="menu">
+            <a href="index.html" class= "red-green-link"><li>Home</li></a>
+            <a href="gallery.html" class="green-blue-link"><li>Gallery</li></a>
+            <a href="about.html" class="blue-red-link"><li>About</li></a>
+            <a href="contact.html" class="red-green-link"><li>Contact</li></a>
+            </ul>
+        </div>
+   </nav>
+    <!-- Get in touch -->
+    <!-- still hero banner -->
+    <div class="contact-container">
+        <!-- contains the contact form -->
+        <div class = "email-container"> 
+            <h2>Contact Emory:</h2>
+            <form action="">
+                <ul>
+                    <li>
+                        <label for="first-name">First Name</label>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label for="last-name">Last Name</label>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label for="email">email</label>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <textarea name="message" id="" cols="30" rows="10"></textarea>
+                    </li>
+                    <li>
+                        <button>Submit</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <!-- contains social media stuff -->
+        <div class = "contact-socials">
+            <ul>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Twitch</li>
+                <li>Youtube</li>
+            </ul>
+        </div>
+        <!-- contains fiverr button -->
+        <div class = "contact-services">
+            <ul>
+                <li>Fiverr</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Footer (Social Links + Regular Links + Signature) --> 
     <footer>
         <div class = "foot-container">
             <!-- Footer Navigation -->

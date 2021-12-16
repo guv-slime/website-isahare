@@ -35,15 +35,55 @@ body {
     /* margin: 0 3.5rem; */
 }
 
+.contact-body {
+    background-image: none;
+    background-color: var(--clr-grey);
+
+    /* margin: 0 3.5rem; */
+}
+
 h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 3.17rem;
 }
 
+/*---------- Link - Styling Section ---------- */
+.red-green-link {
+    color: var(--clr-red);
+}
+
+.red-green-link:hover li {
+    color: var(--clr-green);
+    transition: 0.75s;
+    border-bottom: 5px solid var(--clr-grey);
+    padding-left: 3rem !important;
+}
+
+.green-blue-link {
+    color: var(--clr-green);
+}
+
+.green-blue-link:hover li{
+    color: var(--clr-blue);
+    transition: 0.75s;
+    border-bottom: 5px solid var(--clr-grey);
+    padding-left: 3rem !important;
+}
+
+.blue-red-link {
+    color: var(--clr-blue);
+}
+
+.blue-red-link:hover li{
+    color: var(--clr-red);
+    transition: 0.75s;
+    border-bottom: 5px solid var(--clr-grey);
+    padding-left: 3rem !important;
+}
+
 /* --------Header & Navigation Bar -----------*/
 nav {
-    padding: 0.25rem 0 0.25rem 0.25rem;
-    
+    padding: 0.25rem 0 0.25rem 0.25rem; 
 }
 
 .nav-list {
@@ -150,6 +190,174 @@ nav {
     }
 }
 
+
+/* ---- Hamburger Menu --------- */
+/* <!--    Made by Erik Terwan    -->
+     & Edited by Emory Hare :)
+<!--   24th of November 2015   -->
+<!--        MIT License        --> */
+#nav-burger {
+    position: fixed;
+    z-index: 7;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/* Burger - spans */
+#red-span {
+    background-color: var(--clr-red);
+    box-shadow: 0 0 3px white, 0 0 3px black;
+}
+
+#green-span {
+    background-color: var(--clr-green);
+    box-shadow: 0 0 3px white, 0 0 3px black;}
+
+#blue-span {
+    background-color: var(--clr-blue);
+    box-shadow: 0 0 3px white, 0 0 3px black;}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* ---- Burger TO x ------- */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: var(--clr-blue);
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.932), rgba(128, 128, 128, 0.568));
+  border-radius: 1rem;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 3rem;
+  font-weight: 900;
+  -webkit-text-stroke: 2px white;
+}
+
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+@media screen and (max-width: 899px) {
+    #nav-main {
+        display: none;
+    }
+    #nav-burger {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #nav-main {
+        display: block;
+    }
+    #nav-burger {
+        display: none;
+    }
+}
+
 /* ----------- Hero Image / Text ---------- */
 /* The animation code */
 @keyframes hero-bun {
@@ -164,7 +372,7 @@ nav {
     background-image: url("../img/bun-logo-color-2.svg");
     background-position: right;
     background-size: 1800px;
-    height: 90vh;
+    height: 100vh;
     background-color: black;
     background-repeat: no-repeat;
 
@@ -187,27 +395,21 @@ nav {
     color: white;
 }
 
-/* Anime-Arrow Animation */
-/* @keyframes hero-arrow-slide {
-    from {padding-top: 0;}
-    to {padding-top: 2rem;}
-} */
-
 @keyframes hero-arrow-grow {
-    from {transform: scale(1);}
-    to {transform: scale(1.5);}
+    from {transform: skewY(30deg);}
+    to {transform: skewY(-30deg);}
 }
-/* weird x - scrollbar moves with animation 
-   fixed by adding x overflow to body
-   
-   has something to do with padding*/
 
 .anime-arrow {
-    animation-name: hero-arrow-slide, hero-arrow-grow;
-    animation-duration: 1s;
+    animation-name: hero-arrow-grow;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     padding-top: 1rem;
+}
+
+#anime-ion {
+    font-size: 64px;
 }
 
 .hero-item a {
@@ -224,11 +426,8 @@ nav {
 
 /* Anything under 1300 px */
 @media screen and (max-width: 1300px) {
-    .hero-banner .hero-item {
+    .hero-banner, .hero-item {
         position: relative;
-    }
-    .hero-banner {
-        height: 60vh;
     }
     .hero-item h1{
         font-size: 4em;
@@ -320,7 +519,7 @@ nav {
     to {opacity: 0.7;}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 810px) {
     .gallery-column {
         flex: 100%;
         max-width: 100%;
@@ -460,4 +659,60 @@ nav {
 .created-by {
     color: white;
     padding: 1rem;
+}
+
+
+/* ------ About Page ------- */
+.about-container {
+    margin: 1rem 20rem;
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: -column;
+}
+
+@media screen and (max-width: 1300px){
+    .about-container{
+        margin: 1rem 5rem;  
+    }
+}
+
+@media screen and (max-width: 900px){
+    .about-container{
+        margin: 1rem 2rem;  
+    }
+}
+
+/* ----- Contact  Page------ */
+.contact-container {
+    display: grid;
+    margin: 0.75rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.25rem;
+}
+
+.contact-container > div {
+    padding: 2rem;
+    margin: 0.25rem;
+    width: 100%;
+    border-radius: 1rem;
+    color: white;
+}
+
+.email-container {
+    background: var(--clr-red);
+}
+
+.contact-socials {
+    background-color: var(--clr-green);
+}
+
+.contact-services {
+    background-color: var(--clr-blue);
+}
+
+@media screen and (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr
+    }
 }

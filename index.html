@@ -15,7 +15,7 @@
 
     <!-- Header (Bun Logo + My Name), Navigation (Links / Flex Box)-->     
     <header>
-        <nav>
+        <nav id="nav-main">
             <ul class = "nav-list">
                 <li class = "nav-item">
                     <a href="index.html">
@@ -34,16 +34,34 @@
                 <img id = "bun" src="img/banner.png" alt="Bun Logo">                
             </ul>
         </nav>
+           
     </header>
 
-    <!-- Hero Image Banner + Text  -->
+    <!-- Hero Image Banner + Text + Hamburger  -->
     <div class = "hero-banner">
+        <nav id="nav-burger">
+            <div id="menuToggle">
+
+                <input type="checkbox" />
+            
+                <span id="red-span"></span>
+                <span id="green-span"></span>
+                <span id="blue-span"></span>
+            
+                <ul id="menu">
+                <a href="index.html" class= "red-green-link"><li>Home</li></a>
+                <a href="gallery.html" class="green-blue-link"><li>Gallery</li></a>
+                <a href="about.html" class="blue-red-link"><li>About</li></a>
+                <a href="contact.html" class="red-green-link"><li>Contact</li></a>
+                </ul>
+            </div>
+       </nav>
         <div class="hero-item">
-            <h1>Digtal Artist</h1>
+            <h1>Emory Hare</h1>
             <h2>Illustrations, Prints, & More</h2>
             <div class = "anime-arrow">
                 <a href="#gallery">
-                    <ion-icon id = "anime-ion" size = "large" name="caret-down-circle-outline"></ion-icon>
+                    <ion-icon id = "anime-ion" name="caret-down-circle-outline"></ion-icon>
                 </a>
             </div>
         </div>
