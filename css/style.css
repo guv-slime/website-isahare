@@ -663,24 +663,73 @@ nav {
 
 
 /* ------ About Page ------- */
+#about-body {
+    background-image: url(../img/backcamp.jpg);
+}
 .about-container {
-    margin: 1rem 20rem;
+    color: var(--clr-grey);
+    margin: 0 1rem;
+}
+
+/* phone */
+@media screen and (min-width: 320px) {
+    .about-container {
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .about-container div {
+        padding: 0.25rem 0;
+    }
+    /* adjust image size -- smaller (background-image / clip) */
+    .about-container img {
+        width: 100%;
+        border-radius: 0.75rem;
+    }
+    .about-container h1, h2 {
+        float: right;  
+        -webkit-text-stroke: 1px black; /* affects h2 links in footer*/
+    }
+    .about-container p {
+        text-indent: 2rem;
+        padding: 1rem;
+        border-radius: 0.75rem;
+    }
+    #para-00 {
+        background-color: var(--clr-red);
+    }
+    #para-01 {
+        background-color: var(--clr-green);
+    }
+    #para-02 {
+        background-color: var(--clr-blue);
+    }
+    .about-container h2 {
+        font-size: 30px;
+    }
+    #cv {
+        background-color: var(--clr-red);
+        border-style: inset;
+        border-radius: 0.75rem;
+        margin: 1rem 0;
+        padding: 1rem 2rem;
+        font-weight: 200;
+        font-size: 20px;
+    }
+    #cv li {
+        padding: 0.25rem 0;
+    }
     
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: -column;
 }
 
-@media screen and (max-width: 1300px){
-    .about-container{
-        margin: 1rem 5rem;  
-    }
+/* tablets */
+@media screen and (min-width: 641px) {
+    
 }
 
-@media screen and (max-width: 900px){
-    .about-container{
-        margin: 1rem 2rem;  
-    }
+/* computers */
+@media screen and (min-width: 1025px) {
+    
 }
 
 /* ----- Contact  Page------ */
