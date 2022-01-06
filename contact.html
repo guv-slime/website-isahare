@@ -51,53 +51,66 @@
             </ul>
         </div>
    </nav>
-    <!-- Get in touch -->
-    <!-- still hero banner -->
+   <!-- contact start -->
     <div class="contact-container">
-        <!-- contains the contact form -->
-        <div class = "email-container"> 
-            <h2>Contact Emory:</h2>
-            <form action="">
-                <ul>
-                    <li>
-                        <label for="first-name">First Name</label>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <label for="last-name">Last Name</label>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <label for="email">email</label>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <textarea name="message" id="" cols="30" rows="10"></textarea>
-                    </li>
-                    <li>
-                        <button>Submit</button>
-                    </li>
-                </ul>
-            </form>
+        <!-- contact title and form -->
+        <div class="form-container">
+            <!-- contact header image / text -->
+            <div class="form-heading">
+                <h1>Contact Me:</h1>
+            </div>
+            <div class="big-contact">
+                <div class="contact-section">
+                    <!-- emailname+contactform@email.com -->
+                    <form action="mailto:4s51p4lib@mozmail.com"
+            
+                    method="POST"
+            
+                    enctype="multipart/form-data"
+            
+                    name="EmailForm">
+                    
+                    Name:<br>
+            
+                    <input type="text" size="19" name="ContactName"><br><br>
+            
+                    Message:<br> <textarea name="ContactComment" rows="6" cols="20">
+            
+                    </textarea><br><br> <input id="form-button" type="submit" value="Submit"></form>
+                </div>
+                <div class="contact-paragraph">
+                    <p>Interested in a print? Commission? Something else? Shoot me an email!</p>
+                    <ion-icon id="mail-icon"name="mail-outline"></ion-icon>
+                </div>
+            </div>            
         </div>
-        <!-- contains social media stuff -->
-        <div class = "contact-socials">
-            <ul>
-                <li>Twitter</li>
-                <li>Instagram</li>
-                <li>Twitch</li>
-                <li>Youtube</li>
-            </ul>
-        </div>
-        <!-- contains fiverr button -->
-        <div class = "contact-services">
-            <ul>
-                <li>Fiverr</li>
-            </ul>
+        <!-- social container: patreon, fiverr, twitter-->
+        <div class="contact-social-container">
+            <div class="social-tile" id="patreon">
+                <h2>Become a Bun! Join the Patreon Today:</h2>
+                <div id="patreon-bun">
+                    <img src="/img/bun_logo_vector.svg" alt="">
+                </div>
+                <a href="https://www.patreon.com/emoryisahare" target="blank">
+                    <button>Go to Patreon</button>
+                </a>
+            </div>
+            <div class="social-tile" id="fiverr">
+                <h2>Fiverr Commissions: Starting at $5!</h2>
+                <ion-icon name="cash-outline"></ion-icon>
+                <a href="https://www.fiverr.com/emoryisahare" target="blank">
+                    <button>Hire Me</button>
+                </a>
+            </div>
+            <div class="social-tile" id="twitter">
+                <h2>@emoryisahare</h2>
+                <ion-icon name="logo-twitter"></ion-icon>
+                <a href="https://twitter.com/emoryisahare" target="blank">
+                    <button>Tweet @ Me</button>
+                </a>
+            </div>
         </div>
     </div>
-    
-    
     
     <!-- Footer (Social Links + Regular Links + Signature) --> 
     <footer>
