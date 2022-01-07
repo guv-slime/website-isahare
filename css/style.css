@@ -38,7 +38,7 @@ body {
 .contact-body {
     background-image: none;
     background-color: var(--clr-grey);
-    background-image: url("/img/backwonka.jpg");
+    background-image: url("../img/backwonka.jpg");
 
     /* margin: 0 3.5rem; */
 }
@@ -575,7 +575,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
 
-    background-image: url(../img/banner.png);
+    background-image: url("../img/banner.png");
 }
 
 .button-cool {
@@ -831,6 +831,8 @@ nav {
         font-family: 'Raleway', sans-serif;
         border-radius: 0.75rem;
         font-size: 18px;
+
+        width: 100%;
     }
     .contact-section input {
         height: 40px;

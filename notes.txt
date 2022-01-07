@@ -1,9 +1,0 @@
-12.1.21
-
-Home Page
-1. sticky navbar (when widescreen)
-3. pop up cards for images in Gallery
-
-
-LATER:
-Work on other pages 
