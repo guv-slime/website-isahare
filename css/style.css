@@ -827,31 +827,31 @@ nav {
         text-align: center;
         font-size: 20px;
     }
-    .contact-section input, text, textarea {
-        font-family: 'Raleway', sans-serif;
-        border-radius: 0.75rem;
-        font-size: 18px;
-
-        width: 100%;
-    }
-    .contact-section input {
-        height: 40px;
-        width: 100%;
-    }
-    #form-button {
+    .contact-section button {
         text-decoration: none;
         border: none;
-        color: white;
-        font-weight: 700;
-        padding: 0.5rem;
         background-color: var(--clr-green);
-        border-radius: 2rem;
+        padding: 2rem;
+        border-radius: 50%;
         box-shadow: 0 4px 2px #551426;
-        font-size: 20px;
     }
-    #form-button:hover {
+    .contact-section button:hover {
         background-color: var(--clr-blue);
         transition: 0.75s;
+    }
+    @keyframes mail-button {
+        from{rotate: 360deg};
+        to{rotate: 0deg};
+    }
+    .contact-section ion-icon {
+        font-size: 64px;
+        color: white;
+
+        /* mail-button */
+        animation-name: mail-button;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
     }
     .contact-paragraph {
         background-color: var(--clr-blue);
