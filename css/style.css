@@ -91,13 +91,17 @@ h1 {
     text-align: center;
     color: white;
     font-weight: 600;
+    
+    border-radius: 0.2rem;
+    margin: 0 0.25rem;
+    padding: 0.25rem;
 }
 .notify-bar a {
     color: white;
 }
 /* --------Header & Navigation Bar -----------*/
 nav {
-    padding: 0.25rem 0 0.25rem 0.25rem; 
+    padding: 0 0.25rem 0.25rem 0.25rem; 
 }
 
 .nav-list {
@@ -306,27 +310,17 @@ nav {
   background: var(--clr-blue);
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 {
   position: absolute;
@@ -356,9 +350,6 @@ nav {
 }
 
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ ul
 {
   transform: none;
@@ -592,11 +583,11 @@ nav {
 
 
 
-/* ------------ Call to Action / Contact-form ----------- */
+/* ------------ Call to Action / Services ----------- */
 .action-container {
     display: flex;
     flex-direction: row;
-    margin: 0.5rem 0.5rem;
+    margin: 0.5rem;
 
     color: white;
 }
@@ -605,41 +596,42 @@ nav {
     background-color: var(--clr-blue);
     width: 100%;
     align-items: center;
-    padding: 5em;
+    padding: 4rem;
     border-radius: 1rem;
-    margin-right: 0.5rem;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 
     background-image: url("../img/banner.png");
 }
 
-.contact-form {
-    background-color: var(--clr-green);
-    width: 100%;
-    align-items: center;
-    padding: 5rem;
-    border-radius: 1rem;  
+#service-list {
+    text-align: right;
+}
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#service-list li {
+    padding: 0.25rem 0;
+}
 
-    background-image: url("../img/banner.png");
+#service-list a{
+    color: white;
+}
+
+#service-list a:hover{
+    color: var(--clr-dark);
+    transition: 0.5s;
 }
 
 .button-cool {
     background-color: var(--clr-red);
     border: none;
-    border-radius: 0.75em;
-    padding: 1.5em;
-    font-size: 1em;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
     font-family: 'Raleway', sans-serif;
     color: white;
-    font-weight: 700;
-    margin-top: 2em;
+    font-weight: 600;
     
     transition-duration: 0.5s;
 }
@@ -649,13 +641,11 @@ nav {
     cursor: pointer;
 }
 
+
+
 @media screen and (max-width: 1600px) {
     .action-container {
         flex-direction: column;
-    }
-    .call-to-act {
-        margin-bottom: 0.5rem;
-        margin-right: 0;
     }
 }
 
@@ -847,27 +837,32 @@ nav {
         align-items: center;
 
         margin-top: 5rem;
-    }
-    .form-heading {
-        padding-bottom: 1rem;
-    }
-    .form-heading h1 {
-        color: white;
-        text-shadow: #588162;
+        padding: 30px;
     }
     .big-contact {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         margin: 0 1rem;
     }
+
+    .big-contact h1 {
+        padding-bottom: 2rem;
+    }
+
+    #contact-bun {
+        width: 100%;
+        height: auto;
+        background-color: var(--clr-green);
+        border-radius: 50%;
+    }
+
     .contact-section {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         
-        background-color:var(--clr-red);
-        padding: 3rem;
+        padding: 2rem;
 
         color: white;
         font-weight: 700;
@@ -879,13 +874,20 @@ nav {
         text-align: center;
         font-size: 20px;
     }
+    .contact-section h2 {
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        
+    }
     .contact-section button {
         text-decoration: none;
         border: none;
-        background-color: var(--clr-green);
-        padding: 2rem;
-        border-radius: 50%;
-        box-shadow: 0 4px 2px #551426;
+        background-color: var(--clr-red);
+        padding: 1rem;
+        border-radius: 3rem;
+        box-shadow: 0 0 20px var(--clr-blue);
     }
     .contact-section button:hover {
         background-color: var(--clr-blue);
@@ -906,14 +908,14 @@ nav {
         animation-direction: alternate;
     }
     .contact-paragraph {
-        background-color: var(--clr-blue);
+        /* background-color: var(--clr-blue); */
         border-top-right-radius: 1rem;
         border-top-left-radius: 1rem;
 
         color: white;
         font-size: 1.25rem;
         font-weight: 700;
-        padding: 1rem;
+        padding: 2rem;
 
         text-align: center;
     }
