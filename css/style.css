@@ -23,9 +23,12 @@ html {
 body {
     font-family: 'Raleway', sans-serif;
     background-color: var(--clr-grey);
-    background-image: url("../img/backpurple.png");
 
     overflow-x: hidden; /* transform-animation scrolling fix */
+}
+
+#home-body {
+    background-image: url("../img/backpurple.png");
 }
 
 .gallery-body {
@@ -1210,6 +1213,91 @@ nav {
         grid-template-columns: 500px 320px 320px;
     }
 }
+/* ======= Blog Page ======== */
+/* .bun-blog-header h1 {
+    text-align: center;
+    color: var(--clr-red);
+    text-shadow: -2px -2px #aaa;
+    margin: 1rem;
+} */
+.bun-blog-header img {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+}
+/* mobile */
+@media screen and (min-width: 300px) {
+    .blog-article-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+    }
+    .blog-card {
+        margin: 0.5rem 0;
+        background-color: rgb(238, 238, 238);
+        border-radius: 2rem;
+        box-shadow: 0 5px 20px #aaa;
+    }
+    .card-image {
+        margin-bottom: -2rem;
+    }
+    .card-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+    .card-image span {
+        color: white;
+        background-color: var(--clr-green);
+        padding: 5px;
+        border-radius: 5px;
+        position: relative;
+        top: -2rem;
+        left: 0.5rem;
+        font-weight: 600;
+    }
+    .card-title {
+        padding: 1rem;
+    }  
+    .card-title h2 {
+        margin: 0.5rem 0;
+        color: var(--clr-blue);
+    }
+}
+@media screen and (min-width: 600px) {
+    .blog-article-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+        margin: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .blog-article-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1rem;
+        margin: 0 10%;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .blog-article-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 1rem;
+        margin: 0 10%;
+    }
+}
+
+
+
+
+
+
 
 /* ======= Blog Post Template ======= */
 /* 
@@ -1229,6 +1317,10 @@ nav {
 
 #blog-body {
     background-image: none;
+}
+
+#blog-body p {
+    line-height: 2;
 }
 
 @media screen and (min-width: 320px){
@@ -1272,7 +1364,6 @@ nav {
         flex-direction: column;
         flex-wrap: wrap;
         text-align: right;
-
     }
     .blog-sharing a {
         color: var(--clr-green);
@@ -1282,6 +1373,7 @@ nav {
     }
     .img-vid-container {
         text-align: right;
+        font-size: 12px;
         font-style: italic;
         color:#912141
     }
@@ -1306,31 +1398,49 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--clr-green);
-        border-radius: 2rem;
         padding: 1rem;
-        margin: 1rem;
     }
     .blog-iframe {
         border: none;
-        width: 300px; 
-        height: 200px;
+        width: 100%; 
+        height: 400px;
     }
 }
-/* @media screen and (min-width: 641px){
-    .blog-container {}
-    .blog-header {}
-    .blog-category{}
-    .blog-title {}
-    .blog-portrait {}
-    .blog-byline {}
-    .blog-date {}
-    .twitter-share-button {}
-    .blog-content {}
-    .blog-img-vid {}
-    .affiliate-links {}
-    .blog-links {}
+/* Tablets */
+@media screen and (min-width: 641px){
+    .blog-container {
+        padding-top: 4rem;
+        margin: 0 5rem;
+    }
+    .blog-by-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .blog-sharing {
+        display: flex;
+        flex-direction: row;
+    }
+    .blog-sharing a {
+        padding-right: 5px;
+    }
+    .img-vid-container {
+        font-style: italic;
+        color:#912141;
+    }
+    .blog-img-vid {
+        width: 100%;
+        height: auto;        
+    }
+    .blog-iframe {
+        border: none;
+        width: 500px; 
+        height: 400px;
+    }
 }
+/*
 @media screen and (min-width: 1025px){
     .blog-container {}
     .blog-header {}
