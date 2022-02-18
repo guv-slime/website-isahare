@@ -162,6 +162,11 @@ nav {
     transition: color 0.75s;
 }
 
+.nav-item:nth-child(6) a {
+    color: var(--clr-blue);
+    transition: color 0.75s;
+}
+
 /* Hovers */
 #emory-name:hover {
     font-weight: 400;
@@ -192,6 +197,10 @@ nav {
 
 .nav-item:nth-child(5) a:hover{
     color: var(--clr-blue);
+    text-decoration: underline;
+}
+.nav-item:nth-child(6) a:hover{
+    color: var(--clr-red);
     text-decoration: underline;
 }
 
@@ -358,8 +367,8 @@ nav {
   transform: none;
 }
 
-/* 899px */
-@media screen and (max-width: 1022px) {
+/* 1146px */
+@media screen and (max-width: 1146px) {
     #nav-main {
         display: none;
     }
@@ -368,8 +377,8 @@ nav {
     }
 }
 
-/* 900px */
-@media screen and (min-width: 1023px) {
+/* 1145px */
+@media screen and (min-width: 1145px) {
     #nav-main {
         display: block;
     }
@@ -1440,18 +1449,22 @@ nav {
         height: 400px;
     }
 }
-/*
+
 @media screen and (min-width: 1025px){
-    .blog-container {}
-    .blog-header {}
-    .blog-category{}
-    .blog-title {}
-    .blog-portrait {}
-    .blog-byline {}
-    .blog-date {}
-    .twitter-share-button {}
-    .blog-content {}
-    .blog-img-vid {}
-    .affiliate-links {}
-    .blog-links {}
-} */
+    .blog-container {
+        padding-top: 1rem;
+        margin: 0 25%;
+    }
+    .blog-category{
+        text-align: center;
+        color: var(--clr-red)
+    }
+    .blog-title {
+        text-align: center;
+    }
+    .blog-iframe {
+        border: none;
+        width: 800px; 
+        height: 400px;
+    }
+}
