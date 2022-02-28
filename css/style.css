@@ -1332,6 +1332,10 @@ nav {
     line-height: 2;
 }
 
+#paypal-link {
+    color: var(--clr-blue);
+}
+
 @media screen and (min-width: 320px){
     .blog-container {
         padding-top: 4rem;
@@ -1413,6 +1417,20 @@ nav {
         border: none;
         width: 100%; 
         height: 400px;
+    }
+    .blog-subtitle {
+        color: var(--clr-red);
+        padding: 0.5rem 0;
+        font-weight: 400;
+    }
+    .blog-list {
+        margin-left: 3rem;
+    }
+    .blog-list > li {
+        list-style: disc;        
+    }
+    .blog-list-sub-item {
+        margin-left: 3rem;
     }
 }
 /* Tablets */
